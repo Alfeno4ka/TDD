@@ -44,4 +44,11 @@ public class PhoneBookTest {
         List<String> result = phoneBook.findByNumber("+7 (990) 123-45-67");
         assertEquals(0, result.size());
     }
+
+    @Test
+    public void testFindByName_existingName() {
+        phoneBook.add("Александр", "+7 (990) 123-45-67");
+        String result = phoneBook.findByName("Александр");
+        assertEquals("+7 (990) 123-45-67", result);
+    }
 }
