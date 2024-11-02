@@ -12,6 +12,9 @@ public class PhoneBook {
     }
 
     public int add(String name, String phone) {
-        return 0;
+        if (!contacts.containsKey(name)) {
+            contacts.put(name, phone);
+        }
+        return contacts.size();
     }
 }
