@@ -20,6 +20,9 @@ public class PhoneBook {
     }
 
     public List<String> findByNumber(String phone) {
-        return null;
+        return contacts.entrySet().stream()
+                .filter(contact -> contact.getValue().equals(phone))
+                .map(contact -> contact.getKey())
+                .toList();
     }
 }
