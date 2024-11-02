@@ -31,7 +31,7 @@ public class PhoneBook {
     }
 
     public List<String> printAllNames (){
-        return null;
+        return contacts.keySet().stream().toList();
     }
 
 
