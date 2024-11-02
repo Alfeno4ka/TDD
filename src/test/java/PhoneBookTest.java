@@ -51,4 +51,15 @@ public class PhoneBookTest {
         String result = phoneBook.findByName("Александр");
         assertEquals("+7 (990) 123-45-67", result);
     }
+
+    @Test
+    public void testPrintAllNames(){
+        phoneBook.add("Александр", "+7 (990) 123-45-67");
+        phoneBook.add("Николай", "+7 (991) 111-45-77");
+        phoneBook.add("Борис", "+7 (995) 111-45-77");
+        phoneBook.add("Марина", "+7 (997) 111-45-77");
+        List<String> result = phoneBook.printAllNames();
+        List<String> expected = List.of("Александр", "Борис", "Марина", "Николай");
+        assertEquals(expected, result );
+    }
 }

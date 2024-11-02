@@ -30,5 +30,9 @@ public class PhoneBook {
         return contacts.get(name);
     }
 
+    public List<String> printAllNames (){
+        return null;
+    }
+
 
 }
